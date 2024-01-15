@@ -78,7 +78,7 @@ const app = createApp({
         .then((res) => {
           const { token, expired } = res.data;
           document.cookie = `tedToken=${token}; expires=${new Date(expired)}; `;
-          location.pathname = "./index.html";
+          location.pathname = "./product.html";
         })
         .catch((err) => {
           console.log(err);
@@ -95,12 +95,12 @@ const app = createApp({
         .then((res) => {})
         .catch((err) => {
           window.alert("驗證錯誤，請重新登入");
-          location.pathname = "/login.html";
+          location.pathname = "./index.html";
         });
     },
   },
   mounted() {
-    if (location.pathname != "./login.html") {
+    if (location.pathname != "/index.html") {
       this.checkLogin();
     }
   },
