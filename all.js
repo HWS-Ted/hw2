@@ -95,7 +95,7 @@ const app = createApp({
         .then((res) => {})
         .catch((err) => {
           window.alert("驗證錯誤，請重新登入");
-          location.pathname = "./login.html";
+          location.pathname = "/login.html";
         });
     },
   },
